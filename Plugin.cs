@@ -79,8 +79,8 @@ namespace Spoof_HWID
                 GameObject.Find("MenuContent/Popups/StandardPopup/BodyText").GetComponent<Text>().color = Color.blue;
                 
 
-            //------------------------------------------------------------------------------------------------------------------------
-            Console.WriteLine(formattedDateTime + "[ColoredUI -> Patch -> Authentication]");
+                //------------------------------------------------------------------------------------------------------------------------
+                Console.WriteLine(formattedDateTime + "[ColoredUI -> Patch -> Authentication]");
                 GameObject.Find("MenuContent/Screens/Authentication/StoreLoginPrompt/VRChat_LOGO (1)").gameObject.SetActive(false);
                 GameObject.Find("MenuContent/Screens/Authentication/StoreLoginPrompt/ButtonAboutUs (1)").gameObject.SetActive(false);
                 GameObject.Find("MenuContent/Screens/Authentication/StoreLoginPrompt/LanguagePanel").gameObject.SetActive(false);
