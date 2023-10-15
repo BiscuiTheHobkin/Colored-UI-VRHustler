@@ -13,11 +13,7 @@ namespace ColoredUI
 	
 	[ModuleInfo("ColoredUI", "1.0", "Biscuit")]
 	public class Plugin : VRModule
-    {
-        // Only: static Main() for Start()
-
-     
-
+        {
         public static void Main()
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
@@ -139,10 +135,7 @@ namespace ColoredUI
                 GameObject.Find("TrackingVolume/VRLoadingOverlay/FlatLoadingOverlay(Clone)/Container/Canvas/Background").GetComponent<Image>().color = Color.black;
                 GameObject.Find("TrackingVolume/VRLoadingOverlay/FlatLoadingOverlay(Clone)/Container/Canvas/Background/Layout/LoadIndicator").GetComponent<RawImage>().color = Color.red;
                 GameObject.Find("TrackingVolume/VRLoadingOverlay/FlatLoadingOverlay(Clone)/Container/Canvas/Background/Layout/WorldThumbnailBackground").gameObject.SetActive(false);
-                
-
-
-        }
+      }
     }
   }
 
