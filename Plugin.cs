@@ -11,7 +11,7 @@ using System.Collections;
 namespace ColoredUI
 {
 	
-	[ModuleInfo("ColoredUI", "1.0", "Biscuit")]
+	[ModuleInfo("ColoredUI", "1.0", "Bunny~")]
 	public class Plugin : VRModule
         {
         public static void Main()
