@@ -1,0 +1,8 @@
+C:\Users\Biscuit\Documents\Visual Studio 2022\VRC\BE4V Test Module\awwww\Spoof_HWID\bin\Debug\Spoof_HWID.dll
+C:\Users\Biscuit\Documents\Visual Studio 2022\VRC\BE4V Test Module\awwww\Spoof_HWID\bin\Debug\Spoof_HWID.pdb
+C:\Users\Biscuit\Documents\Visual Studio 2022\VRC\BE4V Test Module\awwww\Spoof_HWID\bin\Debug\mm.dll
+C:\Users\Biscuit\Documents\Visual Studio 2022\VRC\BE4V Test Module\awwww\Spoof_HWID\obj\Debug\Spoof_HWID.csproj.AssemblyReference.cache
+C:\Users\Biscuit\Documents\Visual Studio 2022\VRC\BE4V Test Module\awwww\Spoof_HWID\obj\Debug\Spoof_HWID.csproj.CoreCompileInputs.cache
+C:\Users\Biscuit\Documents\Visual Studio 2022\VRC\BE4V Test Module\awwww\Spoof_HWID\obj\Debug\Spoof_HWID.csproj.CopyComplete
+C:\Users\Biscuit\Documents\Visual Studio 2022\VRC\BE4V Test Module\awwww\Spoof_HWID\obj\Debug\Spoof_HWID.dll
+C:\Users\Biscuit\Documents\Visual Studio 2022\VRC\BE4V Test Module\awwww\Spoof_HWID\obj\Debug\Spoof_HWID.pdb

@@ -7,20 +7,32 @@ using System.Security.Principal;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-
+using System.Data;
+using System.Threading;
+using System.Runtime.InteropServices;
+using VRC;
 namespace ColoredUI
 {
 	
-	[ModuleInfo("ColoredUI", "1.0", "Bunny~")]
+	[ModuleInfo("Just a manual patch...", "1.1", "Biscuit...")]
 	public class Plugin : VRModule
-        {
+    {
+        // Only: static Main() for Start()
+
+
+        
         public static void Main()
         {
+           
+
+            
             Console.ForegroundColor = ConsoleColor.Cyan;
             DateTime currentDateTime = DateTime.Now;
             string formattedDateTime = currentDateTime.ToString("[HH:mm:ss] -> ");
-               
                 
+
+                
+
                 //------------------------------------------------------------------------------------------------------------------------
                 Console.WriteLine(formattedDateTime + "[ColoredUI -> Patch -> LogoContainer]");
                 GameObject.Find("MenuContent/Screens/Title/LogoContainer/vrchatlogo2sided").gameObject.SetActive(false);
@@ -33,8 +45,8 @@ namespace ColoredUI
 
                //------------------------------------------------------------------------------------------------------------------------
                 Console.WriteLine(formattedDateTime + "[ColoredUI -> Patch -> AlertPopup]");
-                GameObject.Find("MenuContent/Popups/AlertPopup/Darkness").GetComponent<Image>().color = Color.black;
-                GameObject.Find("MenuContent/Popups/AlertPopup/Lighter").GetComponent<Image>().color = Color.blue;
+                GameObject.Find("MenuContent/Popups/AlertPopup/Darkness").gameObject.SetActive(false);
+            GameObject.Find("MenuContent/Popups/AlertPopup/Lighter").GetComponent<Image>().color = Color.blue;
                 GameObject.Find("MenuContent/Popups/AlertPopup/Button").GetComponent<Image>().color = Color.blue;
                 GameObject.Find("MenuContent/Popups/AlertPopup/Button/Text").GetComponent<Text>().color = Color.blue;
                 GameObject.Find("MenuContent/Popups/AlertPopup/BodyText").GetComponent<Text>().color = Color.blue;
@@ -98,14 +110,19 @@ namespace ColoredUI
                 GameObject.Find("MenuContent/Screens/Authentication/LoginUserPass/VRChat_LOGO (1)").gameObject.SetActive(false);
                 GameObject.Find("MenuContent/Screens/Authentication/LoginUserPass/TextWelcome").gameObject.SetActive(false);
                 GameObject.Find("MenuContent/Screens/Authentication/LoginUserPass/ButtonAboutUs").gameObject.SetActive(false);
+                GameObject.Find("MenuContent/Screens/Authentication/LoginUserPass/BoxLogin/Panel").gameObject.SetActive(false);
                 GameObject.Find("MenuContent/Screens/Authentication/LoginUserPass/ButtonBack (1)").GetComponent<Image>().color = Color.blue;
                 GameObject.Find("MenuContent/Screens/Authentication/LoginUserPass/ButtonDone (1)").GetComponent<Image>().color = Color.blue;
-
+                GameObject.Find("MenuContent/Screens/Authentication/LoginUserPass/BoxLogin/InputFieldPassword").GetComponent<Image>().color = Color.clear;
+                GameObject.Find("MenuContent/Screens/Authentication/LoginUserPass/BoxLogin/InputFieldUser").GetComponent<Image>().color = Color.clear;
+                GameObject.Find("MenuContent/Screens/Authentication/LoginUserPass/BoxLogin").GetComponent<Image>().color = Color.clear;
+                
                 //------------------------------------------------------------------------------------------------------------------------
                 Console.WriteLine(formattedDateTime + "[ColoredUI -> Patch -> InputPopup]");
-                GameObject.Find("MenuContent/Popups/InputPopup/Darkness").GetComponent<Image>().color = Color.black;
-                GameObject.Find("MenuContent/Popups/InputPopup/Rectangle").GetComponent<Image>().color = Color.black;
-                GameObject.Find("MenuContent/Popups/InputPopup/Rectangle/Panel").GetComponent<Image>().color = Color.blue;
+                GameObject.Find("MenuContent/Popups/InputPopup/Darkness").GetComponent<Image>().gameObject.SetActive(false);
+                GameObject.Find("MenuContent/Popups/InputPopup/Rectangle").gameObject.SetActive(false);
+                GameObject.Find("MenuContent/Popups/InputPopup/InputField").GetComponent<Image>().color = Color.black;
+                GameObject.Find("MenuContent/Popups/InputPopup/TitleText").GetComponent<Text>().color = Color.red;
                 GameObject.Find("MenuContent/Popups/InputPopup/ButtonRight").GetComponent<Image>().color = Color.blue;
                 GameObject.Find("MenuContent/Popups/InputPopup/ButtonRight/Text").GetComponent<Text>().color = Color.blue;
                 GameObject.Find("MenuContent/Popups/InputPopup/ButtonLeft").GetComponent<Image>().color = Color.blue;
@@ -114,28 +131,35 @@ namespace ColoredUI
                 
                 //------------------------------------------------------------------------------------------------------------------------
                 Console.WriteLine(formattedDateTime + "[ColoredUI -> Patch -> InputKeypadPopup]");
-                GameObject.Find("MenuContent/Popups/InputKeypadPopup/Darkness").GetComponent<Image>().color = Color.black;
-                GameObject.Find("MenuContent/Popups/InputKeypadPopup/Rectangle").GetComponent<Image>().color = Color.black;
+                GameObject.Find("MenuContent/Popups/InputKeypadPopup/Darkness").gameObject.SetActive(false);
+                GameObject.Find("MenuContent/Popups/InputKeypadPopup/Rectangle").gameObject.SetActive(false);
                 GameObject.Find("MenuContent/Popups/InputKeypadPopup/InputField").GetComponent<Image>().color = Color.blue;
                 GameObject.Find("MenuContent/Popups/InputKeypadPopup/Rectangle/Panel").GetComponent<Image>().color = Color.black;
                 GameObject.Find("MenuContent/Popups/InputKeypadPopup/TitleText").GetComponent<Text>().color = Color.blue;
+                GameObject.Find("MenuContent/Popups/InputKeypadPopup/InputField").GetComponent<Image>().color = Color.red;
+                GameObject.Find("MenuContent/Popups/InputKeypadPopup/ButtonLeft").GetComponent<Image>().color = Color.blue;
+                GameObject.Find("MenuContent/Popups/InputKeypadPopup/ButtonLeft/Text").GetComponent<Text>().color = Color.blue;
+                GameObject.Find("MenuContent/Popups/InputKeypadPopup/ButtonRight").GetComponent<Image>().color = Color.blue;
+                GameObject.Find("MenuContent/Popups/InputKeypadPopup/ButtonRight/Text").GetComponent<Text>().color = Color.blue;
 
                 //------------------------------------------------------------------------------------------------------------------------
                 Console.WriteLine(formattedDateTime + "[ColoredUI -> Patch -> StandardPopupV2]");
-                GameObject.Find("MenuContent/Popups/StandardPopupV2/Darkness").GetComponent<Image>().color = Color.black;
-                GameObject.Find("MenuContent/Popups/StandardPopupV2/Popup/BorderImage").GetComponent<Image>().color = Color.black;
-                GameObject.Find("MenuContent/Popups/StandardPopupV2/Popup/Panel").GetComponent<Image>().color = Color.black;
-                GameObject.Find("MenuContent/Popups/StandardPopupV2/Popup/ExitButton").GetComponent<Image>().color = Color.blue;
-                GameObject.Find("MenuContent/Popups/StandardPopupV2/Popup/Buttons/LeftButton").GetComponent<Image>().color = Color.blue;
-                GameObject.Find("MenuContent/Popups/StandardPopupV2/Popup/Buttons/RightButton").GetComponent<Image>().color = Color.blue;
+            GameObject.Find("MenuContent/Popups/StandardPopupV2/Darkness").gameObject.SetActive(false);
+            GameObject.Find("MenuContent/Popups/StandardPopupV2/Popup/BorderImage").GetComponent<Image>().color = Color.black;
+            GameObject.Find("MenuContent/Popups/StandardPopupV2/Popup/Panel").GetComponent<Image>().color = Color.black;
+            GameObject.Find("MenuContent/Popups/StandardPopupV2/Popup/ExitButton").GetComponent<Image>().color = Color.blue;
+            GameObject.Find("MenuContent/Popups/StandardPopupV2/Popup/Buttons/LeftButton").GetComponent<Image>().color = Color.blue;
+            GameObject.Find("MenuContent/Popups/StandardPopupV2/Popup/Buttons/RightButton").GetComponent<Image>().color = Color.blue;
 
-                //------------------------------------------------------------------------------------------------------------------------
-                Console.WriteLine(formattedDateTime + "[ColoredUI -> Patch -> FlatLoadingOverlay -> you will be get a erorr if you are in vr]");
+            //------------------------------------------------------------------------------------------------------------------------
+            Console.WriteLine(formattedDateTime + "[ColoredUI -> Patch -> FlatLoadingOverlay -> you will be get a erorr if you are in vr]");
                 Console.WriteLine(formattedDateTime + "[ColoredUI -> Patch -> Done]");
                 GameObject.Find("TrackingVolume/VRLoadingOverlay/FlatLoadingOverlay(Clone)/Container/Canvas/Background").GetComponent<Image>().color = Color.black;
                 GameObject.Find("TrackingVolume/VRLoadingOverlay/FlatLoadingOverlay(Clone)/Container/Canvas/Background/Layout/LoadIndicator").GetComponent<RawImage>().color = Color.red;
                 GameObject.Find("TrackingVolume/VRLoadingOverlay/FlatLoadingOverlay(Clone)/Container/Canvas/Background/Layout/WorldThumbnailBackground").gameObject.SetActive(false);
-      }
-    }
+            
+     }
+   }
   }
+
 
